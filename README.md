@@ -125,3 +125,14 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 ### Cost
 - Cost-effectiveness: Optimize resource utilization and minimize operational costs.
 - Scalability: The system should be scalable to accommodate growth without excessive cost.
+
+
+# Assumptions About the Video Streaming Platform
+1. The platform has atleast 1 billion users, and out of those atleast 200 million are active users.
+2. The has atleast 1 million videos.
+3. The platform sees atleast 1000 videos being uploaded everyday.
+4. The platform witnesses at least 1 billion requests per day (12000 requests per day).
+
+
+# Data Model for the Video Streaming Platform
+![alt text](images/data_model.png)
