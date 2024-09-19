@@ -137,26 +137,4 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 # Data Model for the Video Streaming Platform
 ![alt text](images/data_model.png)
 
-| Users | Shows | Sessions | Genre |
-|---|---|---|---|
-| User ID | Show ID | ID | Genre ID |
-| User Email | Show Description | User ID | Genre Type |
-| Address | Show Type | Show ID | Status |
-| Phone Number | Genre ID | Device ID |  |
-| Password | Length | Playback Start |  |
-| Joined Date | Release Date | Timestamp |  |
-| Plan ID | Is Downloadable | Playback End |  |
-| Status | Subtitles (Y/N) | Timestamp |  |
-| Payment ID | Audio Description | Paused Time |  |
-|  | (Y/N) | Session Time |  |
-|  |  | Pause Time |  |
-| Devices | Plans | Payments |  |
-| Device ID | Plan ID | Payment ID |  |
-| Device Type | Plan Name | User ID |  |
-| Status | Streaming Limit | Payment ID |  |
-|  | Plan Base Rate | Payment Method |  |
-|  | Plan Start Date | Total Amount |  |
-|  | Status | Transaction ID |  |
-|  |  | Payment Status |  |
-
 # 
