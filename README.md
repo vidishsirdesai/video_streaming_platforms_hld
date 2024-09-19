@@ -144,61 +144,62 @@ erDiagram
         string user_email
         string address
         int phone_number
-        string Password
-        datetime JoinedDate
-        int PlanID
-        bool IsActive
-        int PaymentID
+        string password
+        datetime joined_date
+        int plan_id
+        bool is_active
+        int payment_id
     }
     Shows {
-        int ShowID
-        string ShowDescription
-        string ShowType
-        int GenreID
-        int Length
-        datetime ReleaseDate
-        bool IsDownloadable
-        bool SubtitleAvailable 
-        bool AudioDescriptionAvailable
+        int show_id
+        string show_description
+        string show_type
+        int genre_id
+        int length
+        datetime release_date
+        bool is_downloadable
+        bool subtitle_available 
+        bool audio_description_available
     }
     Sessions {
-        int ID
-        int UserID
-        int ShowID
-        int DeviceID
-        datetime PlaybackStartTimestamp
-        datetime PlaybackEndTimestamp
-        datetime PausedTime
-        datetime SessionTime
-        datetime PauseTime
+        int session_id
+        int user_id
+        int show_id
+        int device_id
+        datetime playback_start_timestamp
+        datetime playback_end_timestamp
+        datetime paused_time
+        datetime session_time
+        datetime pause_time
     }
     Genre {
-        int GenreID
-        string GenreType
-        bool IsActive
+        int genre_id
+        string genre_type
+        bool is_active
     }
     Devices {
-        int DeviceID
-        string DeviceType
-        bool IsActive
+        int device_id
+        string device_type
+        bool is_active
     }
     Plans {
-        int PlanID
-        string PlanName
-        int StreamingLimit
-        int PlanBaseRate
-        datetime PlanStartDate
-        bool IsActive
+        int plan_id
+        string plan_name
+        int streaming_limit
+        int plan_base_rate
+        datetime plan_start_date
+        bool is_active
     }
     Payments {
-        int PaymentID
-        int PaymentID
-        int UserID
-        string PaymentMethod
-        int TotalAmount
-        int TransactionID
-        bool PaymentStatus
+        int payment_id
+        int user_id
+        datetime payment_date
+        string payment_method
+        int total_amount
+        int transaction_id
+        bool payment_status
     }
+    Users ||--|{ Sessions
 ```
 
 
