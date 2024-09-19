@@ -139,7 +139,7 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 ```mermaid
 erDiagram
     Users {
-        int UserID
+        int User ID
         string UserName
         string UserEmail
         string Address
