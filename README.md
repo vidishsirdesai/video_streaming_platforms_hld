@@ -199,7 +199,13 @@ erDiagram
         int transaction_id
         bool payment_status
     }
-    Users ||--|{ Sessions
+    Users --|| Sessions : {1, *}
+    Users --|| Payments : {1, *}
+    Shows --|| Sessions : {1, *}
+    Devices --|| Sessions : {1, *}
+    Plans --|| Users : {1, *}
+    Genres --|| Shows : {*, *}
+    Payments --|| Plans : {*, 1}
 ```
 
 
