@@ -201,13 +201,13 @@ erDiagram
     }
     a ||--|{ c : "can have"
     a ||--|{ g : "can make"
+    b ||--|{ c : "can have"
+    e ||--|{ c : "can have"
+    f ||--|{ a : "can be assigned"
+    d }|--|{ b : "can have"
+    a ||--|{ e : "can own"
+    a ||--|| f : "can be associated with"
 ```
-
-Value (left)	Value (right)	Meaning
-|o	            o|	            Zero or one
-||	            ||	            Exactly one
-}o	            o{	            Zero or more (no upper limit)
-}|	            |{	            One or more (no upper limit)
 
 
 # Data Storage
