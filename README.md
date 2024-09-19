@@ -6,6 +6,22 @@ Develop a high level design of a robust and user-centric video streaming service
 This document aims to develop the high level design of the said system, while describing the principles of high level design.
 
 
+# What is System Design?
+System design is the process of defining the architecture, components, modules, and interfaces of a software system to ensure it meets the specified requirements. It involves breaking a complex system down into smaller, manageable parts while considering factors like performance, scalability, maintainability, and security.
+
+### Key aspects of system design
+- Architectural patterns: Selecting appropriate architectural styles (e.g., layered, microservices, event-driven) based on the system's requirements and goals.
+- Component design: Designing individual components or modules within the system, defining their responsibilities and interactions.
+- Data flow: Modeling how data flows through the system, including input, processing, and output.
+- Interface design: Specifying how components communicate with each other, including the data exchanged and the protocols used.
+- Non-functional requirements: Considering factors like performance, scalability, security, and maintainability during the design process.
+
+### Phases in system design
+System design is typically performed in 2 phases,
+1. High level design (HLD): Provides a conceptual averview of the system's architecture, focusing on the major components and their interactions.
+2. Low level design (LLD): Defines the detailed design of individual components, including data structures, algorithms, and interfaces.
+
+
 # What is High Level Design?
 High level design (HLD) is a conceptual representation of a software system's architecture, focusing on the overall structure, components, and their interactions. It provides a blueprint for the system's design, outlining the key modules, their responsibilities, and how they communicate with each other.
 
