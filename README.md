@@ -139,66 +139,65 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 ```mermaid
 erDiagram
     Users {
-        UserID
-        UserName
-        UserEmail
-        Address
-        PhoneNumber
-        Password
-        JoinedDate
-        PlanID
-        IsActive
-        PaymentID
+        int UserID
+        string UserName
+        string UserEmail
+        string Address
+        int PhoneNumber
+        string Password
+        datetime JoinedDate
+        int PlanID
+        bool IsActive
+        int PaymentID
     }
     Shows {
-        ShowID
-        ShowDescription
-        ShowType
-        GenreID
-        Length
-        ReleaseDate
-        IsDownloadable
-        SubtitleAvailable 
-        AudioDescriptionAvailable
+        int ShowID
+        string ShowDescription
+        string ShowType
+        int GenreID
+        int Length
+        datetime ReleaseDate
+        bool IsDownloadable
+        bool SubtitleAvailable 
+        bool AudioDescriptionAvailable
     }
-
     Sessions {
-        ID
-        UserID
-        ShowID
-        DeviceID
-        PlaybackStartTimestamp
-        PlaybackEndTimestamp
-        PausedTime
-        SessionTime
-        PauseTime
+        int ID
+        int UserID
+        int ShowID
+        int DeviceID
+        datetime PlaybackStartTimestamp
+        datetime PlaybackEndTimestamp
+        datetime PausedTime
+        datetime SessionTime
+        datetime PauseTime
     }
     Genre {
-        GenreID
-        GenreType
-        IsActive
+        int GenreID
+        string GenreType
+        bool IsActive
     }
     Devices {
-        DeviceID
-        DeviceType
-        IsActive
+        int DeviceID
+        string DeviceType
+        bool IsActive
     }
     Plans {
-        PlanID
-        PlanName
-        StreamingLimit
-        PlanBaseRate
-        PlanStartDate
-        IsActive
+        int PlanID
+        string PlanName
+        int StreamingLimit
+        int PlanBaseRate
+        datetime PlanStartDate
+        bool IsActive
     }
     Payments {
-        PaymentID
-        UserID
-        PaymentID
-        PaymentMethod
-        TotalAmount
-        TransactionID
-        PaymentStatus
+        int PaymentID
+        int PaymentID
+        int UserID
+        string PaymentMethod
+        int TotalAmount
+        int TransactionID
+        bool PaymentStatus
     }
 ```
 
