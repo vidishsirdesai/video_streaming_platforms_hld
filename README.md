@@ -199,7 +199,7 @@ erDiagram
         int transaction_id
         bool payment_status
     }
-    a ||--|{ c 
+    a ||--|{ c : has
 ```
 
 Value (left)	Value (right)	Meaning
