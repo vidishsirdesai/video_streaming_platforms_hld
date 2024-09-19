@@ -137,9 +137,6 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 # Data Model (ER Diagram) for the Video Streaming Platform
 
 ```mermaid
----
-title: ER Diagram for the Video Streaming Platform
----
 erDiagram
     a["Users"] {
         int user_id
