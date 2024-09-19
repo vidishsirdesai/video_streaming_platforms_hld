@@ -138,7 +138,7 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 
 ```mermaid
 erDiagram
-    Users {
+    a["Users"] {
         int user_id
         string user_name
         string user_email
@@ -150,7 +150,7 @@ erDiagram
         bool is_active
         int payment_id
     }
-    Shows {
+    b["Shows"] {
         int show_id
         string show_description
         string show_type
