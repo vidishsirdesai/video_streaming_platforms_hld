@@ -139,7 +139,18 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 
 ```mermaid
 erDiagram
-    Users
+    Users {
+        User ID
+        User Name
+        User Email
+        Address
+        Phone Number
+        Password
+        Joined Date
+        Plan ID
+        Is Active
+        Payment ID
+    }
     Shows
     Sessions
     Genre
