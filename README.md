@@ -312,17 +312,17 @@ The computational requirement can be met in 2 ways,
 
 ![alt text](images/scaling.png)
 
-### Horizontal Scaling
-- Adding more servers: Involves adding more servers to a cluster or distributed system.
-- Increased capacity: Each additional server provides additional processing power, memory, and storage.
-- Benefits: Scalability, fault tolerance, cost-effectiveness (in some cases).
-- Example: A web application can be horizontally scaled by adding more web servers to handle increased traffic.
-
 ### Vertical Scaling
 - Upgrading hardware: Involves upgrading the hardware components of a single server, such as increasing CPU cores, RAM, or storage capacity.
 - Increased capacity: A single server becomes more powerful.
 - Benefits: Simplicity, potentially better performance for certain workloads.
 - Limitations: Can be expensive and may reach hardware limits.
+
+### Horizontal Scaling
+- Adding more servers: Involves adding more servers to a cluster or distributed system.
+- Increased capacity: Each additional server provides additional processing power, memory, and storage.
+- Benefits: Scalability, fault tolerance, cost-effectiveness (in some cases).
+- Example: A web application can be horizontally scaled by adding more web servers to handle increased traffic.
 
 ### How to choose the right scaling strategy?
 This depends on the following factors,
