@@ -139,65 +139,65 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 ```mermaid
 erDiagram
     Users {
-        User ID
-        User Name
-        User Email
+        UserID
+        UserName
+        UserEmail
         Address
-        Phone Number
+        PhoneNumber
         Password
-        Joined Date
-        Plan ID
-        Is Active
-        Payment ID
+        JoinedDate
+        PlanID
+        IsActive
+        PaymentID
     }
     Shows {
-        Show ID
-        Show Description
-        Show Type
-        Genre ID
+        ShowID
+        ShowDescription
+        ShowType
+        GenreID
         Length
-        Release Date
-        Is Downloadable
-        Subtitle Available 
-        Audio Description Available
+        ReleaseDate
+        IsDownloadable
+        SubtitleAvailable 
+        AudioDescriptionAvailable
     }
     Sessions {
         ID
-        User ID
-        Show ID
-        Device ID
-        Playback Start Timestamp
-        Playback End Timestamp
-        Paused Time
-        Session Time
-        Pause Time
+        UserID
+        ShowID
+        DeviceID
+        PlaybackStartTimestamp
+        PlaybackEndTimestamp
+        PausedTime
+        SessionTime
+        PauseTime
     }
     Genre {
-        Genre ID
-        Genre Type
-        Is Active
+        GenreID
+        GenreType
+        IsActive
     }
     Devices {
-        Device ID
-        Device Type
-        Is Active
+        DeviceID
+        DeviceType
+        IsActive
     }
     Plans {
-        Plan ID
-        Plan Name
-        Streaming Limit
-        Plan Base Rate
-        Plan Start Date
-        Is Active
+        PlanID
+        PlanName
+        StreamingLimit
+        PlanBaseRate
+        PlanStartDate
+        IsActive
     }
     Payments {
-        Payment ID
-        User ID
-        Payment ID
-        Payment Method
-        Total Amount
-        Transaction ID
-        Payment Status
+        PaymentID
+        UserID
+        PaymentID
+        PaymentMethod
+        TotalAmount
+        TransactionID
+        PaymentStatus
     }
 ```
 
