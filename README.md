@@ -25,7 +25,7 @@ HLD is essentially a bridge between the problem domain and the detailed design. 
 - Non-functional requirements: Considering factors like performance, security, scalability, and maintainability.
 
 
-# Functional Requirements of a Video Streaming Platform/ Service
+# Functional Requirements of a Video Streaming Platform
 
 ### Content library
 - Extensive catalog of movies, TV shows, docuseries, and other video content.
@@ -64,7 +64,7 @@ HLD is essentially a bridge between the problem domain and the detailed design. 
 - Compatibility with various devices, including smartphones, tablets, computers, and smart TVs.
 
 
-# Non-Functional Requirements for a Video Streaming Platform/Service
+# Non-Functional Requirements for a Video Streaming Platform
 Non-functional requirements (NFRs) define the quality attribute of a system, ensuring it meets user expectations and operates effectively.
 
 ### Performance
