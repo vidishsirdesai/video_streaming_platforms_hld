@@ -3,7 +3,7 @@ Develop a high level design of a robust and user-centric video streaming service
 
 
 # Agenda
-This document aims to develop the said system, while describing the principles of high level design.
+This document aims to develop the high level design of the said system, while describing the principles of high level design.
 
 
 # What is High Level Design?
