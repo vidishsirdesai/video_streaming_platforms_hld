@@ -135,7 +135,6 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 
 
 # Data Model (ER Diagram) for the Video Streaming Platform
-![alt text](images/data_model.png)
 
 ```mermaid
 erDiagram
@@ -151,12 +150,55 @@ erDiagram
         Is Active
         Payment ID
     }
-    Shows
-    Sessions
-    Genre
-    Devices
-    Plans
-    Payments
+    Shows {
+        Show ID
+        Show Description
+        Show Type
+        Genre ID
+        Length
+        Release Date
+        Is Downloadable
+        Subtitle Available (Y/ N)
+        Audio Description Available (Y/ N)
+    }
+    Sessions {
+        ID
+        User ID
+        Show ID
+        Device ID
+        Playback Start Timestamp
+        Playback End Timestamp
+        Paused Time
+        Session Time
+        Pause Time
+    }
+    Genre {
+        Genre ID
+        Genre Type
+        Is Active
+    }
+    Devices {
+        Device ID
+        Device Type
+        Is Active
+    }
+    Plans {
+        Plan ID
+        Plan Name
+        Streaming Limit
+        Plan Base Rate
+        Plan Start Date
+        Is Active
+    }
+    Payments {
+        Payment ID
+        User ID
+        Payment ID
+        Payment Method
+        Total Amount
+        Transaction ID
+        Payment Status
+    }
 ```
 
 
