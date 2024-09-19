@@ -137,6 +137,9 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 # Data Model (ER Diagram) for the Video Streaming Platform
 
 ```mermaid
+---
+title: ER Diagram for the Video Streaming Platform
+---
 erDiagram
     a["Users"] {
         int user_id
@@ -161,7 +164,7 @@ erDiagram
         bool subtitle_available 
         bool audio_description_available
     }
-    Sessions {
+    c["Sessions"] {
         int session_id
         int user_id
         int show_id
@@ -172,17 +175,17 @@ erDiagram
         datetime session_time
         datetime pause_time
     }
-    Genre {
+    d["Genre"] {
         int genre_id
         string genre_type
         bool is_active
     }
-    Devices {
+    e["Devices"] {
         int device_id
         string device_type
         bool is_active
     }
-    Plans {
+    f["Plans"] {
         int plan_id
         string plan_name
         int streaming_limit
@@ -190,7 +193,7 @@ erDiagram
         datetime plan_start_date
         bool is_active
     }
-    Payments {
+    g["Payments"] {
         int payment_id
         int user_id
         datetime payment_date
@@ -200,6 +203,12 @@ erDiagram
         bool payment_status
     }
 ```
+
+Value (left)	Value (right)	Meaning
+|o	            o|	            Zero or one
+||	            ||	            Exactly one
+}o	            o{	            Zero or more (no upper limit)
+}|	            |{	            One or more (no upper limit)
 
 
 # Data Storage
