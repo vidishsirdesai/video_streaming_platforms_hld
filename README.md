@@ -200,6 +200,7 @@ erDiagram
         bool payment_status
     }
     a ||--|{ c : has
+    a ||--|{ g : can make
 ```
 
 Value (left)	Value (right)	Meaning
