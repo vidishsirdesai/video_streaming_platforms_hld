@@ -158,8 +158,8 @@ erDiagram
         Length
         Release Date
         Is Downloadable
-        Subtitle Available (Y/ N)
-        Audio Description Available (Y/ N)
+        Subtitle Available 
+        Audio Description Available
     }
     Sessions {
         ID
