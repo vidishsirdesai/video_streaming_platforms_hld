@@ -199,8 +199,8 @@ erDiagram
         int transaction_id
         bool payment_status
     }
-    a ||--|{ c : has
-    a ||--|{ g : can make
+    a ||--|{ c : "can have"
+    a ||--|{ g : "can make"
 ```
 
 Value (left)	Value (right)	Meaning
