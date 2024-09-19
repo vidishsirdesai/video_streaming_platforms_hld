@@ -28,4 +28,72 @@ HLD is essentially a bridge between the problem domain and the detailed design. 
 # Functional Requirements of a Video Streaming Platform/ Service
 
 ### Content library
-- Extensive
+- Extensive catalog of movies, TV shows, docuseries, and other video content.
+- Ability to categorize content by genre, release year, rating, and other relevant criteria.
+- Support for different languages and subtitles.
+
+### User profiles
+- Allow users to create personalized profiles with viewing history, recommendations, and watchlists.
+- Support for multiple profiles within a single account.
+
+### Video playback
+- High-quality video playback with adaptive streaming to adjust to varying network connections.
+- Support for multiple resolutions and frame rates.
+- Ability to pause, resume, rewind and fast-forward videos.
+
+### Search and discovery
+- Efficient search functionality to find specific content.
+- Personalized recommendations based on viewing history and preferences.
+- Curated collections and playlists.
+
+### Offline viewing
+- Support to download content for offline viewing on compatible devices.
+
+### Social features
+- Users should have an option to like, comment, and rate content.
+- Social sharing options to share content with friends and family.
+
+### Payment support
+- Support should be available for most of the popular payment methods (Debit Card, Credit Card, UPI, etc.).
+
+### Parental controls
+- Restricted profiles to limit content access for childern.
+- PIN protection for parental controls.
+
+### Multi-device support
+- Compatibility with various devices, including smartphones, tablets, computers, and smart TVs.
+
+
+# Non-Functional Requirements for a Video Streaming Platform/Service
+Non-functional requirements (NFRs) define the quality attribute of a system, ensuring it meets user expectations and operates effectively.
+
+### Performance
+- Response time: Ensure quick response times for user actions, such as searching, playing and pausing videos.
+- Throughput: Handle a large number of concurrent users and streams without significant degradation in performance.
+- Scalability: The system should be able to scale up or down to accomodate changes in user demand.
+- Buffering: Minimize buffering during video playback, especially over slower etwork connections.
+
+### Reliability
+- Uptime: Maintain high availability and minimize downtime.
+- Data integrity: Ensure data consistency and accuracy, including user profiles, viewing history, and content metadata.
+- Error handling: Implement robust error handling mechanisms to gracefully handle exceptions and prevent system crashes.
+
+### Security
+- Data privacy: Protect user data, including personal information and viewing history from unauthorized access.
+- Content protection: Prevent unauthorized copying, distribution or privacy of content.
+- Secure authentication: Implement secure authentication and authorization mechanisms to protect user accounts.
+- Compliance: Adhere to relevant data privacy regulations (e.g., GDPR, CCPA).
+
+### Usability
+- User interface: Design an intuitive and user-friendly interface that is easy to navigate.
+- Accessibility: Ensure the platform is accessible to users with disabilities.
+- Localization: Support multiple languages and regions to cater to a global audience.
+
+### Maintainability:
+- Modularity: Design the system with well-defined modules to facilitate maintenance and updates.
+- Documentation: Provide comprehensive documentation for developers and administrators.
+- Testability: Ensure the system is testable with automated testing tools and frameworks.
+
+### Cost
+- Cost-effectiveness: Optimize resource utilization and minimize operational costs.
+- Scalability: The system should be scalable to accommodate growth without excessive cost.
