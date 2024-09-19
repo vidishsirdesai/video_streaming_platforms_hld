@@ -21,6 +21,18 @@ System design is typically performed in 2 phases,
 1. High level design (HLD): Provides a conceptual averview of the system's architecture, focusing on the major components and their interactions.
 2. Low level design (LLD): Defines the detailed design of individual components, including data structures, algorithms, and interfaces.
 
+### How to select the appropriate architectural pattern for the system?
+The concept of logical separation is used to achieve this. Logical separation in system design refers to the process of dividing a system into distinct functional units or modules based on their logical relationships and responsibilities. This separation helps to,
+- Improve modularity: Each module can be developed, tested, and maintained independently, enhancing code organization and reusability.
+- Enhance maintainability: Changes to one module are less likely to impact other parts of the system, reducing the risk of unintended side effects.
+- Promote reusability: Well-defined modules can be reused in other projects, saving development time and effort.
+- Improve understandability: The system becomes easier to understand and reason about when it is logically separated into cohesive units.
+
+Common techniques for logical separation are,
+- Layered architecture: The system is divided into layers based on their logical functions, such as presentation, business logic, and data access. Each layer is responsible for specific tasks, promoting separation of concerns and improving maintainability.
+- Microservices architecture: The system is broken down into small, independently deployable services, each focused on a specific business capability. This approach emphasizes logical separation and enables scalability and flexibility.
+- Component based architecture: The system is built from reusable components that provide specific functionalities. These components are designed to be independent and can be combined in different ways to create various applications, promoting logical separation and code reuse.
+
 
 # What is High Level Design?
 High level design (HLD) is a conceptual representation of a software system's architecture, focusing on the overall structure, components, and their interactions. It provides a blueprint for the system's design, outlining the key modules, their responsibilities, and how they communicate with each other.
