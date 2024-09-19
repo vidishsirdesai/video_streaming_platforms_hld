@@ -161,7 +161,7 @@ erDiagram
         SubtitleAvailable 
         AudioDescriptionAvailable
     }
-```
+
     Sessions {
         ID
         UserID
