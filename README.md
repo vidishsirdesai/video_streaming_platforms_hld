@@ -135,6 +135,7 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 
 
 # Data Model (ER Diagram) for the Video Streaming Platform
+The following is a mock ER diagram showing the different possible entities that a database of a video streaming platform can have,
 
 ```mermaid
 erDiagram
@@ -208,5 +209,124 @@ erDiagram
     a ||--|{ e : "can own"
 ```
 
+An ER (Entity-Relationship) diagram shows the different entities in a database and the relationship between them.
 
-# Data Storage
+
+# What is a Database?
+When designing a video streaming platform, the choice of database system is crucial for efficiently storing and managing large amounts of data, handling real-time operations, and scaling to meed growing user demands. There are 2 primary categories of databases,
+1. SQL (Relational)
+2. NoSQL (Non-Relational)
+
+### SQL databases
+SQL databases, like MySQL, PostgreSQL, and Oracle, are well-suited for structured data with defined schemas. They organize data into tables with rows and columns, enforcing relationships between data elements through primary and foreign keys.
+
+Advantages of SQL databases,
+- Structured data: Ideal for storing well-defined data with clear relationships.
+- ACID properties: Ensure data integrity and consistency through atomicity, consistency, isolation and durability.
+- Query language: Powerful SQL language for querying, manipulating, and analyzing data.
+- Maturity: Well established and mature technology with extensive tooling and support.
+
+Potential challenges for video streaming,
+- Schema rigidity: Can be less flexible for handling rapidly evolving data structures or unstructured data.
+- Performance: May face performance bottlenecks when dealing with large datasets and high-concurrency workloads.
+
+### NoSQL databases
+NoSQL databases, like MongoDB, Cassandra, and Redis, are designed to handle unstructured or semi-stuctured data that doesn't fit well into a traditional relational schema. They offer flexible data models, horizontal scalability, and high performance.
+
+Advantages of NoSQL databases,
+- Flexible data models: Accommodate a variety of data structures, including key-value pairs, document-oriented, columnar, and graph databases.
+- Scalability: Can scale horizontally to handle large datasets and high-concurrency workloads.
+- Performance: Often provide better performance for certain use cases, such as real-time data processing and analytics.
+- Schema flexibility: Allow for schema evolution without downtime.
+
+Potential challenges for video streaming,
+- Data consistency: May require additional measures to ensure data consistency and integrity, especially in distributed environments.
+- Complexity: Can be more complex to manage and query compared to SQL databases.
+
+### How to choose the right database?
+The optimal choice between SQL and NoSQL databases depends on the specific requirements of the video streaming platform. The following point can be considered during deciding the database type for the platform,
+- Data structure: If the data is highly structured and predictable, SQL databases might be suitable.
+- Scalability: For handling large datasets and high-concurrency, NoSQL databases can offer advantages.
+- Performance: The choice between SQL and NoSQL can impact performance based on specific workloads and query patterns.
+- Flexibility: If the data structure is likely to evolve or contain unstructured elements, NoSQL databases might be more flexible.
+ 
+In many cases, a hybrid approach combining SQL and NoSQL databases can be beneficial. For example, SQL databases can be used for storing structured metadata about users, videos, and plans, while NoSQL database can handle real-time data like viewing history, recommendations, and analytics.
+
+### What are the other options other than databases?
+1. File Systems:
+    - Local File Systems: Data is stored on a physical disk or storage device.
+    - Network File Systems (NFS): Data is shared across a network.
+    - Distributed File Systems (DFS): Data is distributed across multiple servers for scalability and fault tolerance.
+2. Databases:
+    - Relational Databases: Data is organized into tables with rows and columns, enforcing relationships between data elements.
+    - NoSQL Databases: Designed to handle unstructured or semi-structured data, offering flexible data models and scalability.
+3. Object Storage:
+    - Stores data as individual objects, each with a unique key and metadata.
+    - Suitable for storing large amounts of unstructured data, such as images, videos, and documents.
+4. Cloud Storage:
+    - Data is stored on remote servers managed by a cloud provider.
+    - Offers scalability, durability, and cost-effectiveness.
+5. In-Memory Databases:
+    - Data is stored in the computer's main memory for faster access.
+    - Suitable for real-time applications with high performance requirements.
+6. Distributed Data Stores:
+    - Data is distributed across multiple nodes for scalability and fault tolerance.
+    - Examples include Apache Cassandra, Apache HBase, and Riak.
+7. Data Warehouses:
+    - Specialized databases designed for storing and analyzing large amounts of historical data.
+    - Used for business intelligence and reporting.
+8. Data Lakes:
+    - Unstructured data storage repositories that can store any type of data in its raw format.
+    - Used for data exploration, machine learning, and big data analytics.
+
+
+# What is Object Storage?
+Object storage is a type of data storage that stores data as individual objects, each identified by a unique key and associated metadata. This differs from traditional file systems, which store data in a hierarchical structure of folders and files.
+
+### Key characteristics of object storage
+- Object-based: Data is stored as individual objects, each with a unique identifier (key) and metadata (information about the object).
+- Scalability: Object storage systems can scale to store massive amounts of data without requiring significant infrastructure changes.
+- Durability: Data is replicated across multiple data centers to ensure high durability and availability.
+- Cost-effective: Object storage is often more cost-effective than traditional file systems for storing large amounts of data.
+- Metadata: Metadata associated with each object provides information about the data, such as content type, size, and access permissions.
+
+### Common use cases for object storage
+- Data backup and archiving: Storing backups of critical data and long-term archives.
+- Content delivery: Distributing large files and content to users worldwide.
+- Big data analytics: Storing and processing large datasets for analytics purposes.
+- IoT applications: Storing data from IoT devices.
+- Media and entertainment: Storing and managing large media files.
+
+### Examples of object storage services
+- Amazon S3: A popular object storage service offered by Amazon Web Services.
+- Google Cloud Storage: Object storage from Google Cloud Platform.
+- Microsoft Azure Blob Storage: Object storage service offered by Microsoft Azure.
+
+
+# How to Deal with the Computational Requirements of a Video Streaming Platform?
+As the load increases, there would certainly be an increase in computational requirements by the platform.
+
+The computational requirement can be met in 2 ways,
+1. Increase the resources (RAM and CPU) of the existing machine. This is called "Vertical Scaling".
+2. Add an additional machine to the existing, such that the load is shared by both the machine (old + new). This is called "Horizontal scaling".
+
+![alt text](images/scaling.png)
+
+### Horizontal Scaling
+- Adding more servers: Involves adding more servers to a cluster or distributed system.
+- Increased capacity: Each additional server provides additional processing power, memory, and storage.
+- Benefits: Scalability, fault tolerance, cost-effectiveness (in some cases).
+- Example: A web application can be horizontally scaled by adding more web servers to handle increased traffic.
+
+### Vertical Scaling
+- Upgrading hardware: Involves upgrading the hardware components of a single server, such as increasing CPU cores, RAM, or storage capacity.
+- Increased capacity: A single server becomes more powerful.
+- Benefits: Simplicity, potentially better performance for certain workloads.
+- Limitations: Can be expensive and may reach hardware limits.
+
+### How to choose the right scaling strategy?
+This depends on the following factors,
+- Workload: The nature of the workload (e.g., CPU-intensive, I/O-bound) can influence the most effective scaling approach.
+- Cost: Horizontal scaling can be more cost-effective in the long run, especially for large-scale systems.
+- Complexity: Vertical scaling is generally simpler to manage, while horizontal scaling can introduce additional complexity.
+- Technology constraints: The underlying technology and infrastructure may limit the options for scaling.
