@@ -206,7 +206,6 @@ erDiagram
     f ||--|{ a : "can be assigned"
     d }|--|{ b : "can have"
     a ||--|{ e : "can own"
-    a ||--|| f : "can be associated with"
 ```
 
 
