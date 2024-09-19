@@ -162,15 +162,15 @@ erDiagram
         AudioDescriptionAvailable
     }
     Sessions {
-        ID
-        UserID
-        ShowID
-        DeviceID
-        PlaybackStartTimestamp
-        PlaybackEndTimestamp
-        PausedTime
-        SessionTime
-        PauseTime
+    ID
+    UserID
+    ShowID
+    DeviceID
+    PlaybackStartTimestamp
+    PlaybackEndTimestamp
+    PausedTime
+    SessionTime
+    PauseTime
     }
     Genre {
         GenreID
