@@ -134,7 +134,19 @@ Non-functional requirements (NFRs) define the quality attribute of a system, ens
 4. The platform witnesses at least 1 billion requests per day (12000 requests per day).
 
 
-# Data Model for the Video Streaming Platform
+# Data Model (ER Diagram) for the Video Streaming Platform
 ![alt text](images/data_model.png)
 
-# 
+```mermaid
+erDiagram
+    Users
+    Shows
+    Sessions
+    Genre
+    Devices
+    Plans
+    Payments
+```
+
+
+# Data Storage
