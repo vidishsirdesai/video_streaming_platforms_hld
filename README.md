@@ -330,3 +330,90 @@ This depends on the following factors,
 - Cost: Horizontal scaling can be more cost-effective in the long run, especially for large-scale systems.
 - Complexity: Vertical scaling is generally simpler to manage, while horizontal scaling can introduce additional complexity.
 - Technology constraints: The underlying technology and infrastructure may limit the options for scaling.
+
+
+# Using AWS for Computation and Orchestration
+AWS by far is the most used and easy to understand cloud services in comparison to its competitors. AWS offers a robust suite of services that can be used for various computational and orchestration tasks.
+
+### Computation
+- E2C (Elastic Compute Cloud): Provides virtual machines (instances) that can be used for a wide range of computational tasks. You can choose from different instance types based on your needs (e.g., CPU-intensive, memory-intensive, GPU-intensive).
+- Lambda: A serverless computing platform that lets you run code without provisioning or managing servers. It's ideal for event-driven applications and microservices.
+- Fargate: A serverless compute engine for containers that abstracts away the infrastructure management. It's used in conjunction with ECS or EKS.
+
+### Orchestration
+- ECS (Elastic Container Service): A highly scalable service for running and managing containers. It offers two deployment models: Fargate and EC2.
+- EKS (Elastic Kubernetes Service): A managed Kubernetes service that simplifies the deployment, management, and scaling of containerized applications.
+- Batch: A fully managed batch computing service that helps you run large-scale batch jobs efficiently.
+
+### Storage services
+- S3 (Simple Storage Service): A highly scalable and durable object storage service that can be used to store data for your computational tasks.
+- RDS (Relational Database Service): Provides managed relational databases (e.g., MySQL, PostgreSQL, Oracle) for your applications.
+- DynamoDB: A fully managed NoSQL database service that offers high performance and scalability.
+
+### Use cases
+- Data processing: Using EC2 instances or Lambda functions to process large datasets.
+- Machine learning: Training and deploying machine learning models on EC2 instances or using managed services like SageMaker.
+- Web applications: Running web applications on EC2 instances or using serverless options like Lambda and API Gateway.
+- Microservices architecture: Orchestrating microservices using ECS or EKS.
+- Batch processing: Running batch jobs using AWS Batch.
+
+### How to deal with the complexity of orchestrating workflows and batch processing?
+AWS step functions is a serverless workflow service that helps to coordinate and automate complex distribution applications. It helps in building state machines, which are visual diagrams that define the sequence of steps required to complete a process. Each step in a state machine can be a Lambda function, an AWS task or a custom activity.
+
+
+# How to Handle the Storage and Delivery of the Video Content?
+When dealing with video content, efficient storage and delivery are crucial for providing a smooth user experience. There are 2 ways in which the content can be stored and delivered to the viewers,
+1. Pre-Transcoding and Storage:
+    - Pre-transcoding: This approach involves creating multiple versions of the video in different resolutions beforehand.
+    - Storage: Each pre-transcoded version can be stored in a single location or distributed across multiple locations for redundancy and performance.
+    - Pros:
+        - Faster delivery: Pre-transcoded videos can be delivered directly to the user without additional processing.
+        - Reduced server load: Pre-transcoding can offload the processing burden from servers during peak usage.
+    - Cons:
+        - Storage overhead: Storing multiple versions of each video can consume significant storage space.
+        - Maintenance: Managing and updating multiple versions can be complex.
+2. On-The-Fly Transcoding
+    - Transcoding: The video is converted to the required resolution and format in real-time based on user device and network conditions.
+    - Storage: Only the original video needs to be stored.
+    - Pros:
+        - Storage efficiency: Only one version of the video needs to be stored.
+        - Flexibility: Can adapt to changing user preferences and network conditions.
+    - Cons:
+        - Higher server load: Transcoding can be computationally intensive, especially for high-resolution videos.
+        - Potential latency: Transcoding may introduce latency, especially for slower networks or older devices.
+
+
+The following are some additional strategies that can be considered,
+
+### Storage
+- Cloud storage:
+    - S3 (Simple Storage Service): AWS's popular object storage service offers high durability, scalability, and cost-effectiveness for storing video files.
+    - Azure Blob Storage: Microsoft's equivalent to S3 provides similar features and integrates well with other Azure services.
+    - Google Cloud Storage: Google's cloud storage solution offers high performance and global reach.
+- Content Delivery Network (CDN):
+    - CDNs cache video content closer to end users, reducing latency and improving delivery speeds.
+    - Popular CDNs include Cloudflare, Akamai, and Fastly.
+- Hybrid Storage:
+    - Combine cloud storage with on-premises storage for a hybrid approach, balancing cost, performance, and data sovereignty.
+
+### Delivery
+- Streaming Protocols:
+    - HTTP Live Streaming (HLS): Apple's adaptive bitrate streaming protocol, widely supported by various devices and platforms.
+    - Dynamic Adaptive Streaming over HTTP (DASH): A flexible and efficient streaming protocol supported by major browsers and devices.
+    - Progressive Downloading: Suitable for shorter videos or offline viewing, where the entire video is downloaded before playback.
+- Transcoding:
+    - Convert video files into different formats and resolutions to optimize delivery for various devices and network conditions.
+    - Consider using cloud-based transcoding services like AWS Elemental MediaConvert or Azure Media Services.
+- Caching:
+    - Implement caching at different levels (CDN, server, browser) to reduce load on storage and improve delivery speeds.
+- Quality of Service (QoS):
+    - Implement mechanisms to ensure consistent video quality and playback experience, even during periods of high traffic or network congestion.
+- DRM (Digital Rights Management):
+    - Protect your video content from unauthorized access and distribution using DRM technologies.
+    - Popular DRM solutions include Widevine, FairPlay, and PlayReady.
+
+### Additional Considerations
+- Metadata: Store metadata (e.g., title, description, tags) with your video content to enable search, indexing, and recommendations.
+- Analytics: Track video usage metrics (e.g., views, watch time, completion rates) to understand audience behavior and optimize content delivery.
+- Security: Implement robust security measures to protect your video content from unauthorized access and breaches.
+- Redundancy: Create backups of your video content to ensure data durability and disaster recovery.
