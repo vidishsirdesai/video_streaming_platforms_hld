@@ -449,4 +449,4 @@ Video streaming is a technology that allows users to watch videos in real-time o
 # How is Content Recommended to the Users on Video Streaming Platform?
 A combination of content based filtering and collaborative filtering recommender systems can be built to address this.
 
-Check out the following link to have an in-depth understanding of Recommender Systems. Link: https://github.com/vidishsirdesai/dsml_end_to_end_reference/blob/main/rec_sys/rec_sys.ipynb.
+Check out the following link to have an in-depth understanding of Recommender Systems are built. Link: https://github.com/vidishsirdesai/dsml_end_to_end_reference/blob/main/rec_sys/rec_sys.ipynb.
