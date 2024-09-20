@@ -417,3 +417,36 @@ The following are some additional strategies that can be considered,
 - Analytics: Track video usage metrics (e.g., views, watch time, completion rates) to understand audience behavior and optimize content delivery.
 - Security: Implement robust security measures to protect your video content from unauthorized access and breaches.
 - Redundancy: Create backups of your video content to ensure data durability and disaster recovery.
+
+
+# How Video Streaming Works?
+Video streaming is a technology that allows users to watch videos in real-time over the internet without having to download the entire file first. This is achieved through a combination of techniques that optimize data delivery and playback.
+
+### Key steps invlved in video streaming
+1. Encoding:
+    - The original video file is converted into a format suitable for streaming, often using codecs like H.264 or VP9.
+    - The video is typically divided into smaller segments (chunks) to facilitate streaming.
+    - Adaptive bitrate streaming (ABS) techniques may be used to create multiple versions of the video at different resolutions and bitrates, allowing the player to adjust the quality based on network conditions.
+2. Storage:
+    - The encoded video segments are stored on a server or a content delivery network (CDN).
+    - CDNs distribute the content across multiple servers worldwide, reducing latency and improving delivery speeds.
+3. Delivery:
+    - When a user requests a video, the streaming server sends the initial video segment.
+    - As the user watches the video, subsequent segments are sent in real-time.
+    - Adaptive bitrate streaming algorithms dynamically adjust the resolution and bitrate of the video based on the user's network bandwidth and device capabilities.
+4. Playback:
+    - The user's device (e.g., computer, smartphone, tablet) receives the video segments and decodes them into a playable format.
+    - The video is displayed on the screen, with the playback rate synchronized with the incoming data.
+
+### Key technologies and protocols involved in video streaming
+- HTTP Live Streaming (HLS): A widely used protocol for adaptive bitrate streaming, developed by Apple.
+- Dynamic Adaptive Streaming over HTTP (DASH): Another popular protocol for adaptive bitrate streaming, supported by major browsers and devices.
+- Progressive Downloading: A simpler method where the entire video is downloaded before playback, suitable for shorter videos or offline viewing.
+- Content Delivery Networks (CDNs): Distribute video content closer to end users, reducing latency and improving delivery speeds.
+- Transcoding: Converting video files into different formats and resolutions to optimize delivery for various devices and network conditions.
+
+
+# How is Content Recommended to the Users on Video Streaming Platform?
+A combination of content based filtering and collaborative filtering recommender systems can be built to address this.
+
+Check out the following link to have an in-depth understanding of Recommender Systems. Link: https://github.com/vidishsirdesai/dsml_end_to_end_reference/blob/main/rec_sys/rec_sys.ipynb.
