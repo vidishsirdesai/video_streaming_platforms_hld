@@ -310,7 +310,7 @@ The computational requirement can be met in 2 ways,
 1. Increase the resources (RAM and CPU) of the existing machine. This is called "Vertical Scaling".
 2. Add an additional machine to the existing, such that the load is shared by both the machine (old + new). This is called "Horizontal scaling".
 
-![alt text](images/scaling.png)
+![alt text](artifacts/scaling.png)
 
 ### Vertical Scaling
 - Upgrading hardware: Involves upgrading the hardware components of a single server, such as increasing CPU cores, RAM, or storage capacity.
